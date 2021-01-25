@@ -1,0 +1,148 @@
+.el-button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  line-height: 1;
+  white-space: nowrap;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  // size start
+  &.el-button--medium {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  &.el-button--small {
+    padding: 9px 15px;
+    font-size: 12px;
+    border-radius: 3px;
+  }
+  &.el-button--mini {
+    padding: 7px 15px;
+    font-size: 12px;
+    border-radius: 3px;
+  }
+  // size end
+  // type start
+  &.el-button--default {
+    border-color: @default-border-color;
+    background: @default;
+    color: @default-font-color;
+    &.is-disable {
+      border-color: @default-border-color-disable;
+      color: @default-font-color-disable;
+    }
+  }
+  &.el-button--primary {
+    border-color: @primary;
+    background: @primary;
+    color: @default;
+    &.is-plain {
+      border-color: @primary-plain-highlight;
+      background: @primary-plain-main;
+      color: @primary;
+      &.is-disable {
+        border-color: @primary-plain-highlight-disable;
+        color: @primary-plain-font-disable;
+      }
+    }
+    &.is-disable {
+      border-color: @primary-disable;
+      background: @primary-disable;
+      cursor: not-allowed;
+    }
+  }
+  &.el-button--success {
+    border-color: @success;
+    background: @success;
+    color: @default;
+    &.is-plain {
+      border-color: @success-plain-highlight;
+      background: @success-plain-main;
+      color: @success;
+      &.is-disable {
+        border-color: @success-plain-highlight-disable;
+        color: @success-plain-font-disable;
+      }
+    }
+    &.is-disable {
+      border-color: @success-disable;
+      background: @success-disable;
+      cursor: not-allowed;
+    }
+  }
+  &.el-button--info {
+    border-color: @info;
+    background: @info;
+    color: @default;
+    &.is-plain {
+      border-color: @info-plain-highlight;
+      background: @info-plain-main;
+      color: @info;
+      &.is-disable {
+        border-color: @info-plain-highlight-disable;
+        color: @info-plain-font-disable;
+      }
+    }
+    &.is-disable {
+      border-color: @info-disable;
+      background: @info-disable;
+      cursor: not-allowed;
+    }
+  }
+  &.el-button--warning {
+    border-color: @warning;
+    background: @warning;
+    color: @default;
+    &.is-plain {
+      border-color: @warning-plain-highlight;
+      background: @warning-plain-main;
+      color: @warning;
+      &.is-disable {
+        border-color: @warning-plain-highlight-disable;
+        color: @warning-plain-font-disable;
+      }
+    }
+    &.is-disable {
+      border-color: @warning-disable;
+      background: @warning-disable;
+      cursor: not-allowed;
+    }
+  }
+  &.el-button--danger {
+    border-color: @danger;
+    background: @danger;
+    color: @default;
+    &.is-plain {
+      border-color: @danger-plain-highlight;
+      background: @danger-plain-main;
+      color: @danger;
+      &.is-disable {
+        border-color: @danger-plain-highlight-disable;
+        color: @danger-plain-font-disable;
+      }
+    }
+    &.is-disable {
+      border-color: @danger-disable;
+      background: @danger-disable;
+      cursor: not-allowed;
+    }
+  }
+  // type end
+  // round
+  &.is-round {
+    border-radius: 20px;
+  }
+  // circle
+  &.is-circle {
+    border-radius: 50%;
+    padding: 12px;
+  }
+}
