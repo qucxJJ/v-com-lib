@@ -7,9 +7,7 @@ export default class App extends Vue {
       <div>
         说明文档
         <div>
-        <router-link to="button">
-          按钮
-        </router-link>
+          <router-link to="button">按钮</router-link>
         </div>
         <router-view></router-view>
       </div>

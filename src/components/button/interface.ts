@@ -9,7 +9,6 @@ export enum EButtonType {
   text = 'text',
 }
 
-
 export enum EButtonSize {
   medium = 'medium',
   small = 'small',

@@ -1,5 +1,5 @@
-import Vue from "vue";
-import VueRouter, { RouteConfig } from "vue-router";
+import Vue from 'vue';
+import VueRouter, { RouteConfig } from 'vue-router';
 import ButtonDoc from '../docs/button';
 
 Vue.use(VueRouter);
@@ -11,14 +11,14 @@ const routes: Array<RouteConfig> = [
   //   component: Home
   // },
   {
-    path: "/button",
-    name: "Button",
+    path: '/button',
+    name: 'Button',
     component: ButtonDoc,
-  }
+  },
 ];
 
 const router = new VueRouter({
-  routes
+  routes,
 });
 
 export default router;
