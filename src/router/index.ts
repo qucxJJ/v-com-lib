@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
-import ButtonDoc from '../docs/button';
+import ButtonDoc from '../docs/button/button';
 
 Vue.use(VueRouter);
 

@@ -1,6 +1,7 @@
 import { Vue, Component } from 'vue-property-decorator';
-import VButton from '../components/button/button';
-import { EButtonSize, EButtonType } from '../components/button/interface';
+import VButton from '../../components/button/button';
+import { EButtonSize, EButtonType } from '../../components/button/interface';
+import './button.less';
 
 @Component
 export default class App extends Vue {
@@ -128,7 +129,7 @@ export default class App extends Vue {
           <li>
             <h3>普通按钮</h3>
             <div>
-              <VButton disable>默认按钮</VButton>
+              <VButton>默认按钮</VButton>
               <VButton size={EButtonSize.medium}>中等按钮</VButton>
               <VButton size={EButtonSize.small}>小型按钮</VButton>
               <VButton size={EButtonSize.mini}>超小按钮</VButton>

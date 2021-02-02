@@ -5,7 +5,7 @@ import { EButtonSize, EButtonType, ENativeButtonType } from './interface';
 @Component
 export default class VButton extends Vue {
   @Prop({ default: EButtonType.default }) public type!: EButtonType;
-  @Prop({ default: EButtonSize.medium }) public size!: EButtonSize;
+  @Prop({ default: EButtonSize.default }) public size!: EButtonSize;
   @Prop({ default: ENativeButtonType.button })
   public nativeType!: ENativeButtonType; // TODO
   @Prop({ default: false }) public plain!: boolean;
@@ -27,7 +27,7 @@ export default class VButton extends Vue {
     const className = [
       EPrefix.button,
       `${EPrefix.button}--${this.type}`,
-      `${EPrefix.button}--${this.size}`,
+      this.size ? `${EPrefix.button}--${this.size}` : '',
       this.plain ? 'is-plain' : '',
       this.round ? 'is-round' : '',
       this.circle ? 'is-circle' : '',
