@@ -4,13 +4,15 @@ import { Vue, Component } from 'vue-property-decorator';
 export default class App extends Vue {
   public render() {
     return (
-      <div>
-        说明文档
-        <div>
-          <router-link to="button">按钮</router-link>
-          <router-link to="color">色彩</router-link>
+      <div class='wrapper'>
+        <div class='left-nav'>
+          <router-link to="button" exact>按钮</router-link>
+          <router-link to="color" exact>色彩</router-link>
+          <router-link to="message" exact>消息提示</router-link>
         </div>
-        <router-view></router-view>
+        <div class="right-content">
+          <router-view></router-view>
+        </div>
       </div>
     );
   }
