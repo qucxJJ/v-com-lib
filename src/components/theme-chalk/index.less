@@ -1,2 +1,29 @@
 @import './color.less';
 @import './button.less';
+
+
+.left-nav {
+  width: 10vw;
+  height: 100vh;
+  display: inline-block;
+  vertical-align: top;
+  padding: 20px;
+  .router-link-active{
+    color: @primary;
+  }
+  a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    margin: 10px;
+    &:hover {
+      color: @primary;
+    }
+  }
+}
+.right-content {
+  width: 80vw;
+  display: inline-block;
+  padding: 20px;
+}
