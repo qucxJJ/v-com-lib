@@ -4,6 +4,9 @@ import router from './router';
 import store from './store';
 // import 'vue-tsx-support/enable-check';
 import './components/theme-chalk/index.less';
+import Message from './components/message/message';
+
+Vue.prototype.$Message =  Message;
 
 Vue.config.productionTip = false;
 

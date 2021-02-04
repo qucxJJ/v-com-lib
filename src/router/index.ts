@@ -7,11 +7,10 @@ import MessageDoc from '../docs/message';
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
-  // {
-  //   path: "/",
-  //   name: "Home",
-  //   component: Home
-  // },
+  {
+    path: "/",
+    redirect: '/button'
+  },
   {
     path: '/button',
     name: 'Button',
