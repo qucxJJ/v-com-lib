@@ -1,0 +1,44 @@
+.el-message {
+  position: fixed;
+  display: inline-block;
+  top:-30px;
+  left: 50%;
+  margin-left: -150px;
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 12px;
+  .close {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+}
+li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.el-message--success {
+  color: #4cac65;
+  background-color: #d0f3d9;
+}
+
+.el-message--error {
+  color: @danger;
+  background-color: #ecabab;
+}
+
+.el-message--info {
+  color: @info;
+  background-color: #d3d6dd;
+}
+
+.el-message--warning {
+  color: @warning;
+  background-color: #ebcea3;
+}
