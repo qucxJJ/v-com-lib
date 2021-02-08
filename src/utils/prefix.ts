@@ -1,5 +1,6 @@
 export enum EPrefix {
   button = 'el-button',
   color = 'el-color',
-  message = 'el-message'
+  message = 'el-message',
+  table = 'el-table',
 }

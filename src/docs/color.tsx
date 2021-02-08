@@ -10,8 +10,12 @@ export default class App extends Vue {
     textarea.value = color
     textarea.select();
     document.execCommand("Copy"); 
-    document.body.removeChild(textarea)
-    alert(`复制成功，当前颜色   ${color}`);
+    document.body.removeChild(textarea);
+    (this as any).$Message({
+      type: 'success',
+      content: '复制成功',
+      time: 1000,
+    })
   }
   public mainColor() {
     return (

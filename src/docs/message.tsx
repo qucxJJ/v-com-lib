@@ -8,7 +8,18 @@ export default class App extends Vue {
    * infoClick
    */
   public infoClick() {
-    console.log(this.$Message());
+    (this as any).$Message({
+      content: '默认信息样式',
+      time: 1000,
+      type: 'info'
+    });
+  }
+  public infoSuccessClick(type: string, content: string) {
+    (this as any).$Message({
+      content: content,
+      time: 1000,
+      type: type
+    });
   }
   public basicUse() {
     return (
@@ -16,6 +27,7 @@ export default class App extends Vue {
         <h2>基础用法</h2>
         <ul>
           <li>
+            {/* <VMessage type='success' content='成功' showClose={false} time={1000}></VMessage> */}
             <VButton onClick={this.infoClick}>
             打开消息提示
             </VButton>
@@ -35,16 +47,16 @@ export default class App extends Vue {
         <h2>不同状态</h2>
         <ul>
           <li>
-          <VButton>成功</VButton>
+          <VButton onClick={ () => {this.infoSuccessClick('success', '成功')} }>成功</VButton>
           </li>
           <li>
-          <VButton>警告</VButton>
+          <VButton onClick={ () => {this.infoSuccessClick('warning', '警告')} }>警告</VButton>
           </li>
           <li>
-          <VButton>消息</VButton>
+          <VButton onClick={ () => {this.infoSuccessClick('info', '消息')} }>消息</VButton>
           </li>
           <li>
-          <VButton>错误</VButton>
+          <VButton onClick={ () => {this.infoSuccessClick('error', '错误')} }>错误</VButton>
           </li>
         </ul>
       </div>

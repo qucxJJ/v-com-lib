@@ -3,6 +3,7 @@ import VueRouter, { RouteConfig } from 'vue-router';
 import ButtonDoc from '../docs/button';
 import ColorDoc from '../docs/color';
 import MessageDoc from '../docs/message';
+import Table from '../docs/table'
 
 Vue.use(VueRouter);
 
@@ -25,6 +26,11 @@ const routes: Array<RouteConfig> = [
     path: '/message',
     name: 'Message',
     component: MessageDoc,
+  },
+  {
+    path: '/table',
+    name: 'Table',
+    component: Table,
   },
 ];
 
