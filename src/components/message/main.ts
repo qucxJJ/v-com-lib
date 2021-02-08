@@ -18,7 +18,7 @@ const DEFAULT_OPTIONS: MessageOptions = {
   type: 'success',
 };
 
-export function MessageUtil(options: MessageOptions | any) {
+export function MessageUtil(options: MessageOptions) {
   let setting: MessageOptions = DEFAULT_OPTIONS;
   setting = options;
 

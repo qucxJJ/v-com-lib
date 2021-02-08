@@ -1,4 +1,5 @@
 import { Vue, Component } from 'vue-property-decorator';
+import './App.less';
 
 @Component
 export default class App extends Vue {
