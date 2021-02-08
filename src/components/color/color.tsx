@@ -5,7 +5,7 @@ import { EColorType, EColorValue } from './interface';
 @Component
 export default class VColor extends Vue {
   @Prop({ default: EColorType.primary }) public type!: EColorType;
-  @Prop({ default: EColorValue.primary }) public value!: EColorValue;
+  @Prop({ default: EColorValue.primary }) public value!: EColorValue | string;
 
   public colorClick(e: MouseEvent) {
     this.$emit('click', e);

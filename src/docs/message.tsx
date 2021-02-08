@@ -18,7 +18,8 @@ export default class App extends Vue {
     (this as any).$Message({
       content: content,
       time: 1000,
-      type: type
+      type: type,
+      showClose: true
     });
   }
   public basicUse() {

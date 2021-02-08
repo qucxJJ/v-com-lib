@@ -1,15 +1,15 @@
 import { EPrefix } from '@/utils/prefix';
 import { Vue, Component, Prop } from 'vue-property-decorator';
-import { EMessageType, EMessageTime, EMessageContent, EMessageShow } from './interface';
+import { EMessageType } from './interface';
 // import * as tsx from 'vue-tsx-support';
 @Component
 export default class Message extends Vue {
   @Prop({ default: EMessageType.info }) public type!: EMessageType;
-  @Prop({ default: '' }) public content!: EMessageContent;
-  @Prop({ default: EMessageTime.default }) public time!: EMessageTime;
-  @Prop({ default: false }) public showClose!: EMessageShow;
-  timer: any = null;
-  timerClose: any = null;
+  public timer: number | null = null;
+  public timerClose: number | null = null;
+  public content = '';
+  public time = 1000;
+  public showClose = false;
 
   public CloseTop() {
     let Top = 20;
@@ -17,7 +17,7 @@ export default class Message extends Vue {
       Top -= 3;
       (this.$refs.message as any).style.top = `${Top}px`;
       if (Top < -30) {
-        window.clearInterval(this.timer);
+        window.clearInterval(this.timer as number);
         this.timer = null;
         (this.$refs.message as any).style.top = `-30px`;
       }         
@@ -30,7 +30,7 @@ export default class Message extends Vue {
       Top += 1;
       (this.$refs.message as any).style.top = `${Top}px`;
       if (Top > 20)  {
-        window.clearInterval(this.timer);
+        window.clearInterval(this.timer as number);
         this.timer = null;
         (this.$refs.message as any).style.top = `20px`;
         this.timerClose = setTimeout(() => {
@@ -45,19 +45,13 @@ export default class Message extends Vue {
       EPrefix.message,
       `${EPrefix.message}--${this.type}`,
     ];
-    let close = null;
-    if (this.showClose) {
-      close = <span onClick={this.CloseTop} class="close">X</span>
-    } else {
-      close = null;
-    }
     return (
       <div
         ref='message'
         class={className}
       >
         {this.content}
-        {close}
+        {this.showClose && <span onClick={this.CloseTop} class="close">X</span>}
         {this.$slots.default}
       </div>
     );
